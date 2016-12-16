@@ -1,0 +1,18 @@
+#! /usr/bin/env node
+const OhWiseOwl = require("../lib/");
+
+const cowFile = process.argv[2];
+
+if (cowFile === '-h') {
+  console.log('Usage: owl-wisdom [cowFile]\n');
+  console.log('cowFile    An optional cowfile name or path to cow file for non-owl insight\n');
+  console.log('More help:');
+  console.log(' -h        Let\'s not insult your intelligence here...');
+  console.log(' -l        List included cow files');
+
+} else if (cowFile === '-l') {
+  console.log('Available cow files:');
+  console.log('beavis.zen  bong  bud-frogs  bunny  cheese  cower  daemon  default  doge  dragon-and-cow  dragon  elephant-in-snake  elephant  eyes  flaming-sheep  ghostbusters  goat  head-in  hedgehog  hellokitty  kiss  kitty  koala  kosh  luke-koala  mech-and-cow  meow  milk  moofasa  moose  mutilated  ren  satanic  sheep  skeleton  small  sodomized  squirrel  stegosaurus  stimpy  supermilker  surgery  telebears  turkey  turtle  tux  vader-koala  vader  whale  www');
+} else {
+  OhWiseOwl.updateAndLearnMe/*(please)*/(cowFile);
+}

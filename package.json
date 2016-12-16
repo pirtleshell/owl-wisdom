@@ -1,0 +1,41 @@
+{
+  "name": "owl-wisdom",
+  "version": "0.0.1",
+  "description": "A wise owl spouts quotes to your terminal, inspired by cowsay",
+  "main": "./bin/owl-wisdom",
+  "scripts": {
+    "test": "node bin/owl-wisdom"
+  },
+  "author": "Robert Pirtle",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "cheerio": "^0.22.0",
+    "cowsay": "^1.1.9",
+    "got": "^6.6.3",
+    "word-wrap": "^1.1.0"
+  },
+  "bin": {
+    "owl-wisdom": "bin/owl-wisdom"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/PirtleShell/owl-wisdom.git"
+  },
+  "keywords": [
+    "owls",
+    "quote",
+    "quotes",
+    "quotations",
+    "cowsay",
+    "wisdom",
+    "wise",
+    "cli",
+    "fun"
+  ],
+  "bugs": {
+    "url": "https://github.com/PirtleShell/owl-wisdom/issues"
+  },
+  "homepage": "https://github.com/PirtleShell/owl-wisdom#readme"
+}
