@@ -39,17 +39,21 @@ $ owl-wisdom stegosaurus
 
 ![stegosaurus](https://cdn.rawgit.com/PirtleShell/owl-wisdom/master/pics/stegosaurus.png)
 
+## More
 
 ```
 $ owl-wisdom -h
 
 Usage: owl-wisdom [cowFile]
 
-cowFile    An optional cowfile name or path to cow file for non-owl insight
+cowFile         An optional cowfile name or path to cow file for non-owl insight
+
+--limit [int]   Get or set the maximum number of quotes to keep in the database,
+                default 100
 
 More help:
- -h        Let's not insult your intelligence here...
- -l        List included cow files
+ -h             Let's not insult your intelligence here...
+ -l             List included cow files
 ```
 
 ## The Quote Database
@@ -65,7 +69,8 @@ The database is saved as `.quoteDb.json` in your home directory. Here's what it 
       author: 'Carl Sagan'
     }
   ],
-  lastUpdate: '2016-12-16'    // recorded so it only updates once a day
+  lastUpdate: '2016-12-16',   // recorded so it only updates once a day
+  limit: 100                  // the maximum quotes to store in the database.
 }
 ```
 

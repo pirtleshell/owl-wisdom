@@ -1,18 +1,33 @@
 #! /usr/bin/env node
 const OhWiseOwl = require("../lib/");
 
-const cowFile = process.argv[2];
-
-if (cowFile === '-h') {
+const cowFile = process.argv[2] ? process.argv[2] : 'owl';
+const help = () => {
   console.log('Usage: owl-wisdom [cowFile]\n');
-  console.log('cowFile    An optional cowfile name or path to cow file for non-owl insight\n');
+  console.log('cowFile         An optional cowfile name or path to cow file for non-owl insight\n');
+  console.log('--limit [int]   Get or set the maximum number of quotes to keep in the database,');
+  console.log('                default 100\n')
   console.log('More help:');
-  console.log(' -h        Let\'s not insult your intelligence here...');
-  console.log(' -l        List included cow files');
+  console.log(' -h             Let\'s not insult your intelligence here...');
+  console.log(' -l             List included cow files');
+};
 
-} else if (cowFile === '-l') {
-  console.log('Available cow files:');
-  console.log('beavis.zen  bong  bud-frogs  bunny  cheese  cower  daemon  default  doge  dragon-and-cow  dragon  elephant-in-snake  elephant  eyes  flaming-sheep  ghostbusters  goat  head-in  hedgehog  hellokitty  kiss  kitty  koala  kosh  luke-koala  mech-and-cow  meow  milk  moofasa  moose  mutilated  ren  satanic  sheep  skeleton  small  sodomized  squirrel  stegosaurus  stimpy  supermilker  surgery  telebears  turkey  turtle  tux  vader-koala  vader  whale  www');
+if (cowFile[0] === '-') {
+  switch (cowFile) {
+    case '-h':
+      help();
+      break;
+    case '-l':
+      console.log('Available cow files:');
+      console.log('beavis.zen  bong  bud-frogs  bunny  cheese  cower  daemon  default  doge  dragon-and-cow  dragon  elephant-in-snake  elephant  eyes  flaming-sheep  ghostbusters  goat  head-in  hedgehog  hellokitty  kiss  kitty  koala  kosh  luke-koala  mech-and-cow  meow  milk  moofasa  moose  mutilated  ren  satanic  sheep  skeleton  small  sodomized  squirrel  stegosaurus  stimpy  supermilker  surgery  telebears  turkey  turtle  tux  vader-koala  vader  whale  www');
+      break;
+    case '--limit':
+      OhWiseOwl.setLimit(process.argv[3] ? Number.parseInt(process.argv[3]) : null);
+      break;
+    default:
+      console.log(`Unrecognized flag ${cowFile}.\n`);
+      help();
+  }
 } else {
   OhWiseOwl.updateAndLearnMe/*(please)*/(cowFile);
 }
