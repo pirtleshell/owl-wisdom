@@ -51,6 +51,8 @@ cowFile         An optional cowfile name or path to cow file for non-owl insight
 --limit [int]   Get or set the maximum number of quotes to keep in the database,
                 default 100
 
+--count         Find out how many quotes are in your database
+
 More help:
  -h             Let's not insult your intelligence here...
  -l             List included cow files
