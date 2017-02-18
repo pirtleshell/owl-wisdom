@@ -9,12 +9,15 @@ const help = () => {
   console.log('                default 100\n');
   console.log('--count         Find out how many quotes are in your database\n');
   console.log('More help:');
-  console.log(' -h             Let\'s not insult your intelligence here...');
+  console.log(' -h, --help     Let\'s not insult your intelligence here...');
   console.log(' -l             List included cow files');
 };
 
 if (cowFile[0] === '-') {
   switch (cowFile) {
+    case '--help':
+      help();
+      break;
     case '-h':
       help();
       break;
