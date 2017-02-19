@@ -8,6 +8,7 @@ const help = () => {
   console.log('--limit [int]   Get or set the maximum number of quotes to keep in the database,');
   console.log('                default 100\n');
   console.log('--count         Find out how many quotes are in your database\n');
+  console.log('--update        Force a quote database update.\n')
   console.log('More help:');
   console.log(' -h, --help     Let\'s not insult your intelligence here...');
   console.log(' -l             List included cow files');
@@ -30,6 +31,9 @@ if (cowFile[0] === '-') {
       break;
     case '--count':
       OhWiseOwl.howManyQuotesDoIHave();
+      break;
+    case '--update':
+      OhWiseOwl.updateAndLearnMe('owl', true);
       break;
     default:
       console.log(`Unrecognized flag ${cowFile}.\n`);

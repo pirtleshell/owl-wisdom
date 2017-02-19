@@ -53,6 +53,8 @@ cowFile         An optional cowfile name or path to cow file for non-owl insight
 
 --count         Find out how many quotes are in your database
 
+--update        Force a quote database update.
+
 More help:
  -h, --help     Let's not insult your intelligence here...
  -l             List included cow files

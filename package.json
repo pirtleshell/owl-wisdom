@@ -1,6 +1,6 @@
 {
   "name": "owl-wisdom",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A wise owl spouts quotes to your terminal, inspired by cowsay",
   "main": "./bin/owl-wisdom",
   "scripts": {
