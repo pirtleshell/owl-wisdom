@@ -30,10 +30,13 @@ if (cowFile[0] === '-') {
       OhWiseOwl.setLimit(process.argv[3] ? Number.parseInt(process.argv[3]) : null);
       break;
     case '--count':
-      OhWiseOwl.howManyQuotesDoIHave();
+      OhWiseOwl.howManyQuotesDoIHave();//?
       break;
     case '--update':
-      OhWiseOwl.updateAndLearnMe('owl', true);
+      OhWiseOwl.updateAndLearnMe('owl', true);//, please.
+      break;
+    case '--where':
+      OhWiseOwl.wheresTheDatabase();//?
       break;
     default:
       console.log(`Unrecognized flag ${cowFile}.\n`);
