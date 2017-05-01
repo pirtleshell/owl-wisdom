@@ -55,6 +55,8 @@ cowFile         An optional cowfile name or path to cow file for non-owl insight
 
 --update        Force a quote database update.
 
+--where         Owl tells you the location of quote database
+
 More help:
  -h, --help     Let's not insult your intelligence here...
  -l             List included cow files

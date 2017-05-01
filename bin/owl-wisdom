@@ -9,6 +9,7 @@ const help = () => {
   console.log('                default 100\n');
   console.log('--count         Find out how many quotes are in your database\n');
   console.log('--update        Force a quote database update.\n')
+  console.log('--where         Owl tells you the location of quote database\n')
   console.log('More help:');
   console.log(' -h, --help     Let\'s not insult your intelligence here...');
   console.log(' -l             List included cow files');
